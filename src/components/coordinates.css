@@ -1,0 +1,27 @@
+#coordinates-warpper {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  margin: 50px;
+}
+
+.left {
+  position: absolute;
+  left: 0px;
+  margin: 50px;
+}
+
+input {
+  position: absolute;
+  left: 35%;
+}
+
+label {
+  position: absolute;
+  left: 20%;
+}

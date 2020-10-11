@@ -1,0 +1,10 @@
+#p-location {
+  display: inline;
+  margin: 0px;
+  position: absolute;
+  bottom: 25px;
+}
+
+#div-location {
+  position: relative;
+}
