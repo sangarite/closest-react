@@ -4,7 +4,7 @@
   cursor: pointer;
 }
 
-#locations {
+#locations-list {
   display: block;
   width: 50%;
   margin: 0 auto;
@@ -13,14 +13,6 @@
 
 .center {
   text-align: center;
-}
-
-p {
-  margin: 50px;
-}
-
-div {
-  color: #912F40;
 }
 
 button {

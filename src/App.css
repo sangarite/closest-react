@@ -1,8 +1,14 @@
-h1 {
+#title  {
   font-size: 150px;
   background-image: url(https://www.mapcentre.com.au/persistent/catalogue_images/products/WorMiFlags.jpg);
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px #7B0D1E;
   color: transparent;
   object-fit: cover;
+}
+
+#description {
+  color: #7B0D1E;
+  margin-bottom: 100px;
+  font-size: 25px;
 }

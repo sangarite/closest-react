@@ -8,10 +8,12 @@ class Menu extends Component {
   render() {
     let locations = [];
     for (let i = 0; i < this.props.count; i++) {
-      locations.push(<Location key={i} number = {i} togglePop={this.props.togglePop}/>);
+      locations.push(
+        <Location key={i} number={i} togglePop={this.props.togglePop}/>
+      );
     }
     return (
-      <div id="locations">
+      <div id="locations-list">
          { locations }
         <img
           src={add}
@@ -19,7 +21,7 @@ class Menu extends Component {
           onClick={this.props.addLocation}
           alt="add"
         />
-        <button onClick={this.props.findClosest}>Find Closest</button>
+        <button >Find Closest</button>
       </div>
     );
   }
