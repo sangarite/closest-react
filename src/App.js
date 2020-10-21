@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Coordinates from './components/coordinates';
+import Map from './components/map1';
 import Menu from './components/menu';
 import './App.css';
 
@@ -10,7 +10,9 @@ class App extends Component {
     super(props);
     this.state = {
       showPop: false,
-      count: 3
+      count: 3,
+      locations: [],
+      address: ''
     };
   }
 
@@ -20,6 +22,15 @@ class App extends Component {
 
   addLocation = () => {
     this.setState({count: this.state.count + 1})
+  }
+
+  findCoordinates = (string, num) => {
+    fetch(`https://eu1.locationiq.com/v1/search.php?key=${KEY}&q=${string}&format=json`)
+      .then(response => response.json())
+      .then(data => this.setState({
+        locations: [...this.state.locations, {data}]
+      }));
+    this.togglePop();
   }
 
   render() {
@@ -35,13 +46,16 @@ class App extends Component {
         <div>
           {
             this.state.showPop ?
-            <Coordinates
+            <Map
               togglePop={this.togglePop}
+              findCoordinates={this.findCoordinates}
+              address={this.state.address}
             /> :
             <Menu
               togglePop = {this.togglePop}
               addLocation = {this.addLocation}
               count = {this.state.count}
+              data = {this.state.data}
             />
           }
         </div>

@@ -9,7 +9,12 @@ class Menu extends Component {
     let locations = [];
     for (let i = 0; i < this.props.count; i++) {
       locations.push(
-        <Location key={i} number={i} togglePop={this.props.togglePop}/>
+        <Location
+          key={i}
+          number={i}
+          togglePop={this.props.togglePop}
+          data={this.props.data}
+        />
       );
     }
     return (

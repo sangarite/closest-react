@@ -13,7 +13,7 @@ class Location extends Component {
           className="icon"
           onClick={this.props.togglePop}
         />
-        <p id="p-location"></p>
+        <p id="p-location">{}</p>
       </div>
     );
   }
